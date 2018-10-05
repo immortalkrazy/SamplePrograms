@@ -6,7 +6,7 @@ public class C1 {
   int z;
   private int u;
 
-  protected void m() {
-
+  protected void m(String where) {
+        System.out.println(where + ": executing C1::m()");
   }
 }
