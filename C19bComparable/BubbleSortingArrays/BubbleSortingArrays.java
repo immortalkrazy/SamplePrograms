@@ -1,6 +1,7 @@
 /**
  * The sample program from Chapter 13 in
  *   Liang Y Daniel, Introduction to Java Programming, 11st Edition
+ * which is revised to use the Bubble sort
  */
 public class BubbleSortingArrays {
   public static void main(String[] args) {
@@ -44,22 +45,15 @@ public class BubbleSortingArrays {
     Comparable currentMin;
     int currentMinIndex;
 
+    // select subarray (the range of the array) where we bubble up the greatest in the subarray
     for (int i = 0; i < list.length - 1; i++) {
-      // Find the maximum in the list[0..i]
-      currentMin = list[i];
-      currentMinIndex = i;
-
-      for (int j = i + 1; j < list.length; j++) {
-        if (currentMin.compareTo(list[j]) > 0) {
-          currentMin = list[j];
-          currentMinIndex = j;
+      // bubble up the greast in the subarray (in the range of the array)
+      for (int j=0; j <list.length - i - 1; j++) {
+        if (list[j].compareTo(list[j+1]) > 0) {
+          Comparable tmp = list[j];
+          list[j] = list[j+1];
+          list[j+1] = tmp;
         }
-      }
-
-      // Swap list[i] with list[currentMinIndex] if necessary;
-      if (currentMinIndex != i) {
-        list[currentMinIndex] = list[i];
-        list[i] = currentMin;
       }
     }
   }
