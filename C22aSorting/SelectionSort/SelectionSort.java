@@ -10,6 +10,7 @@ public class SelectionSort {
     int minIndex = startIndex;
     // find the minimum
     for (int i=startIndex+1; i<numbers.length; i++) {
+      // Question: does it matter if we change "<" to "<="?
       if (numbers[i] < minimum) {
         minimum = numbers[i];
         minIndex = i;

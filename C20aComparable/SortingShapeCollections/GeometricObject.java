@@ -2,7 +2,7 @@
  * The sample program from Chapter 13 in
  *   Liang Y Daniel, Introduction to Java Programming, 11st Edition
  */
- 
+
 public abstract class GeometricObject {
   private String color = "white";
   private boolean filled;

@@ -1,7 +1,6 @@
 /**
  * The sample program from Chapter 13 in
  *   Liang Y Daniel, Introduction to Java Programming, 11st Edition
- * which is revised to use ArrayList
  */
 
 import java.util.Calendar;
