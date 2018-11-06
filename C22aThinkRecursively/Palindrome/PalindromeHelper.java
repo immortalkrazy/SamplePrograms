@@ -15,7 +15,7 @@ public class PalindromeHelper {
   }
 
   // The recursive helper method
-  public static boolean isPalindrome(String s, int beginIndex, int endIndex) {
+  private static boolean isPalindrome(String s, int beginIndex, int endIndex) {
     if (endIndex - beginIndex <= 1) return true;    // base case
 
     if (s.charAt(beginIndex) != s.charAt(endIndex)) return false; // subproblem 1
